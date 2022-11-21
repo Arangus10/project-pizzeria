@@ -80,6 +80,7 @@ export const classNames = {
   booking: {
     loading: 'loading',
     tableBooked: 'booked',
+    tableSelected: 'selected',
   },
   nav: {
     active: 'active',
@@ -112,7 +113,7 @@ export const settings = {
   db: {
     url: '//localhost:3131',
     products: 'products',
-    order: 'order',
+    orders: 'orders',
     booking: 'booking',
     event: 'event',
     dateStartParamKey: 'date_gte',

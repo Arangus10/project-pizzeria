@@ -7,11 +7,8 @@ const app = {
   initBooking: function(){
     const thisApp = this;
 
-    // find booking container
-    const bookingContainer = document.querySelector(select.containerOf.booking);
-    
-    // create a new instance of Booking class
-    thisApp.booking = new Booking(bookingWrapper);
+    thisApp.bookingContainer = document.querySelector(select.containerOf.booking);
+    new Booking(thisApp.bookingContainer);
   },
   
   initPages: function(){
@@ -32,7 +29,7 @@ const app = {
       }
     }
 
-    thisApp.activatePage(idFromHash);
+    thisApp.activatePage(pageMatchingHash);
     
     for(let link of thisApp.navLinks){
       link.addEventListener('click', function(event){
@@ -111,9 +108,7 @@ const app = {
     thisApp.productList.addEventListener('add-to-cart', function(event){
       app.cart.add(event.detail.product);
     });
-  }
-
-  
+  },
 
   init: function(){
     const thisApp = this;

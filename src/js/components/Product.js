@@ -16,6 +16,7 @@ class Product {
     thisProduct.initAmountWidget();
     thisProduct.processOrder();
   }
+  
   renderInMenu() {
     const thisProduct = this;
 
@@ -31,6 +32,7 @@ class Product {
     /* add element to menu */
     menuContainer.appendChild(thisProduct.element);
   }
+
   getElements(){
     const thisProduct = this;
 

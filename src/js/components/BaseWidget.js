@@ -22,7 +22,7 @@ class BaseWidget{
     //console.log('newValue:' + newValue);
     //thisWidget.correctValue = settings.amountWidget.defaultValue;
     
-    if (newValue !== thisWidget.correctValue && thisWidget.isValid(newValue)) {
+    if (newValue !== thisWidget.correctValue && thisWidget.isValid(value)) {
       thisWidget.correctValue = newValue;
       thisWidget.announce();
     }

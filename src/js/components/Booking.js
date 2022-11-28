@@ -90,7 +90,7 @@ class Booking {
 
     for(let item of eventsRepeat){
       if(item.repeat == 'daily') {
-        for(let loopDate = minDate, loopDate <= maxDate; loopDate = utils.addDays(loopDate, 1){
+        for(let loopDate = minDate; loopDate <= maxDate; loopDate = utils.addDays(loopDate, 1)){
           thisBooking.makeBooked(utils.dateToStr(loopDate), item.hour, item.duration, item.table);
         }
       }
@@ -191,6 +191,7 @@ class Booking {
     thisBooking.dom.wrapper.addEventListener('updated', function() {
       thisBooking.updateDOM();
     });
+  }
 }
 
 export default Booking;
